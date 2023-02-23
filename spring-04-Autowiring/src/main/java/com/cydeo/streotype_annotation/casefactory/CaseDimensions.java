@@ -1,7 +1,6 @@
 package com.cydeo.streotype_annotation.casefactory;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
@@ -10,13 +9,13 @@ import org.springframework.stereotype.Component;
 @Setter
 //@AllArgsConstructor
 @Component
-public class Dimensions {
+public class CaseDimensions {
 
     private int width;
     private int height;
     private int depth;
 
-    public Dimensions() {
+    public CaseDimensions() {
         this.width=10;
         this.height=30;
         this.depth=40;
