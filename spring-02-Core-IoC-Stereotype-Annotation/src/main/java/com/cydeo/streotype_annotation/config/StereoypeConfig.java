@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan
+@ComponentScan ("com.cydeo.streotype_annotation") // <-- specifies wich pkgs will be scanned by @CompnentScan
 public class StereoypeConfig {
 
 

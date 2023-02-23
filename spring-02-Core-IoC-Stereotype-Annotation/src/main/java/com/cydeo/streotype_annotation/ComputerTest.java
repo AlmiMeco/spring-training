@@ -8,9 +8,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ComputerTest {
     public static void main(String[] args) {
 
-        ApplicationContext container = new AnnotationConfigApplicationContext(StereoypeConfig.class);
+        var container = new AnnotationConfigApplicationContext(StereoypeConfig.class);
 
         Monitor theMonitor = container.getBean(Monitor.class);
         System.out.println(theMonitor.getSize());
+
     }
 }
