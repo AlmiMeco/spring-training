@@ -2,7 +2,7 @@ package com.cydeo.casefactory;
 
 public class DellCase extends Case {
 
-    public DellCase(String model, String manufacturer, String powerSupply,Dimensions dimensions) {
+    public DellCase(String model, String manufacturer, String powerSupply,CaseDimensions dimensions) {
 
         super(model, manufacturer, powerSupply,dimensions);
     }
