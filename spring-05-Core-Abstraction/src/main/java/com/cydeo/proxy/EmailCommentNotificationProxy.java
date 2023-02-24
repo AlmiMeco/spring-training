@@ -1,6 +1,6 @@
 package com.cydeo.proxy;
 
-import com.cydeo.model.Comment;
+import com.cydeo.entity.Comment;
 
 public class EmailCommentNotificationProxy implements CommentNotificationProxy {
 
