@@ -4,6 +4,7 @@ import com.cydeo.entity.Comment;
 import com.cydeo.proxy.CommentNotificationProxy;
 import com.cydeo.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -25,7 +26,7 @@ public class CommentService {
 
 //    @Autowiring (Dependency Injection) done implicitly
     @Autowired
-    public CommentService(CommentRepository commentDataBase, CommentNotificationProxy emailNotification) {
+    public CommentService(CommentRepository commentDataBase,@Qualifier("emailCommentNotificationProxy") CommentNotificationProxy emailNotification) {
         this.commentDataBase = commentDataBase;
         this.emailNotification = emailNotification;
     }
