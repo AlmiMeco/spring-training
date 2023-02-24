@@ -9,7 +9,7 @@ public class ComputerTest {
 
         ApplicationContext container =new AnnotationConfigApplicationContext(AutoWiring.class);
 
-        PC myPc = container.getBean(PC.class);
+        PCwAutowiredAnnotation myPc = container.getBean(PCwAutowiredAnnotation.class);
 
         System.out.println(myPc.getTheCase().getCaseDimensions().getDepth());
     }
