@@ -26,6 +26,9 @@ public class CommentApp {
 //        --> false (if : Scope = Prototype)
 
 
+        /* Singleton Vs Prototype Scopes Explained in Depth under Day 03 {Spring Core} */
+
+
 
 
     }
