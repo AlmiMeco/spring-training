@@ -15,6 +15,7 @@
         <module name="spring-01-Core-IoC-Bean-Annotation" />
         <module name="spring-05-Core-Abstraction" />
         <module name="spring-07-SpringBootDemo" />
+        <module name="spring-08-MVC-Controller" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +25,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="spring-07-SpringBootDemo" options="-parameters" />
+      <module name="spring-08-MVC-Controller" options="-parameters" />
     </option>
   </component>
 </project>
