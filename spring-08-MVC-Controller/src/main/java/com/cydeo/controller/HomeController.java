@@ -3,13 +3,13 @@ package com.cydeo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+@Controller // <-- controller created { Bean Created & registered under "Handler Mapping" }
 public class HomeController {
 
 
-    @RequestMapping("/home")
+    @RequestMapping("/home")  // <-- end-point created
     public String home(){
-        return "home.html";
+        return "home.html";      // <-- returns .html file
     }
 
 }
