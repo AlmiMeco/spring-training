@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC TASK</title>
+</head>
+<body>
+
+<table>
+  <thead>
+  <tr>
+    <td > |First Name| </td>
+    <td > |Last Name| </td>
+    <td > |Age| </td>
+    <td > |Gender| </td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td th:text="${name1.firstName}">Mike</td>
+    <td th:text="${name1.lastName}">Smith</td>
+    <td th:text="${name1.age}">45</td>
+    <td th:text="${name1.gender}">MALE</td>
+  </tr>
+  <tr>
+    <td th:text="${name2.firstName}">Mike</td>
+    <td th:text="${name2.lastName}">Smith</td>
+    <td th:text="${name2.age}">45</td>
+    <td th:text="${name2.gender}">MALE</td>
+  </tr>
+  <tr>
+    <td th:text="${name3.firstName}">Mike</td>
+    <td th:text="${name3.lastName}">Smith</td>
+    <td th:text="${name3.age}">45</td>
+    <td th:text="${name3.gender}">MALE</td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
