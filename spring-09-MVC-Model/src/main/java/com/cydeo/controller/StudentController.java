@@ -4,16 +4,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 @Controller
 public class StudentController {
 
     @RequestMapping("/welcome")
-    public String dynamicHomePage(Model model){
+    public String dynamicHomePage(Model model) {
+
         model.addAttribute("name", "Cydeo");
         model.addAttribute("name2", "Almi");
+
+
+        LocalDate birthDate = LocalDate.of(2001, 3, 13);
+        model.addAttribute("date", birthDate);
+
         return "student/welcome";
     }
-
-
-
 }
