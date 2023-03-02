@@ -2,6 +2,7 @@ package com.cydeo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -29,5 +30,14 @@ public class CarController {
 
     /* Now anything you search on webApp ( /info?make="...." ) will be passed onto {mapped} into this method */
 
+
+    @RequestMapping("/info/{make}") // <-- param is defined by position (url-path)
+    public String carInfo2(@PathVariable String make){
+     //variable is assigned to paramRequest (name != param : position == param)
+
+        System.out.println(make);
+
+        return "car/car-info";
+    }
 
 }
