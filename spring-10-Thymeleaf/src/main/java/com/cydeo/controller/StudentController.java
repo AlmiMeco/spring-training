@@ -10,7 +10,7 @@ public class StudentController {
 
 
     @RequestMapping("/register")
-    public String register(Model model){
+    public String register(Model model) {
 
         model.addAttribute("students", DataGen.createStudent());
 
@@ -18,7 +18,7 @@ public class StudentController {
     }
 
     @RequestMapping("/welcome")
-    public String welcome(){
+    public String welcome() {
 
         return "student/welcome";
     }

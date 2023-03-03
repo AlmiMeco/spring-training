@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>WELCOME PAGE</title>
+    <meta charset="UTF-8">
+    <title>WELCOME PAGE</title>
 </head>
 <body>
 
 <!---->
 
 <h1> WELCOME </h1>
+
+<!--Fragments-->
+<div th:replace="/fragments/index :: footer-menu"></div>
+<p th:replace="/fragments/index :: cydeo-link"></p>
 
 </body>
 </html>
