@@ -9,14 +9,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.List;
 
-/** localhost:8080/info?make= {????} **/
+/**
+ * localhost:8080/info?make= {????}
+ **/
 
 @Controller
 public class CarController {
 
 
     @RequestMapping("/info")
-    public String carInfo(@RequestParam String make, Model model){
+    public String carInfo(@RequestParam String make, Model model) {
 
         System.out.println(make); //                            <-- printing requested value to console
 
@@ -32,8 +34,8 @@ public class CarController {
 
 
     @RequestMapping("/info/{make}") // <-- param is defined by position (url-path)
-    public String carInfo2(@PathVariable String make){
-     //variable is assigned to paramRequest (name != param : position == param)
+    public String carInfo2(@PathVariable String make) {
+        //variable is assigned to paramRequest (name != param : position == param)
 
         System.out.println(make);
 

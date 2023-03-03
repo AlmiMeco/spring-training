@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MentorController {
 
     @RequestMapping("/mvcTASK")
-    public String mvcTask(Model model){
+    public String mvcTask(Model model) {
 
         Mentor mentor1 = new Mentor(21, "Almi", "Meco", Gender.MALE);
         Mentor mentor2 = new Mentor(43, "Jared", "Smith", Gender.MALE);
