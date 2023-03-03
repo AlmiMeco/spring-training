@@ -9,19 +9,18 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class CydeoApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Comment comment  = new Comment();
-		comment.setAuthor("Johnson");
-		comment.setText("Spring Framework");
+        Comment comment = new Comment();
+        comment.setAuthor("Johnson");
+        comment.setText("Spring Framework");
 
-		ApplicationContext container = SpringApplication.run(CydeoApplication.class, args);
+        ApplicationContext container = SpringApplication.run(CydeoApplication.class, args);
 
-		CommentService commentService = container.getBean(CommentService.class);
-		commentService.publishComment(comment);
+        CommentService commentService = container.getBean(CommentService.class);
+        commentService.publishComment(comment);
 
-	}
-
+    }
 
 
 }

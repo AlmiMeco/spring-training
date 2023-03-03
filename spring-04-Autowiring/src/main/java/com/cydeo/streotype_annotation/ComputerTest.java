@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ComputerTest {
     public static void main(String[] args) {
 
-        ApplicationContext container =new AnnotationConfigApplicationContext(AutoWiring.class);
+        ApplicationContext container = new AnnotationConfigApplicationContext(AutoWiring.class);
 
         PCwAutowiredAnnotation myPc = container.getBean(PCwAutowiredAnnotation.class);
 

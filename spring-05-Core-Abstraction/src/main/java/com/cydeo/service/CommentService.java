@@ -10,13 +10,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class CommentService {
 
-//    'final' keyword will make sure you don't forget to create a Constructor (Implicit AutoWiring)
+    //    'final' keyword will make sure you don't forget to create a Constructor (Implicit AutoWiring)
     private final CommentRepository commentDataBase;
     private final CommentNotificationProxy emailNotification;
 
-    public void publishComment(Comment comment){
+    public void publishComment(Comment comment) {
 //    REQUIREMENTS:
-        
+
         //save to DB
         commentDataBase.storeComment(comment);
         //send as email
@@ -24,9 +24,9 @@ public class CommentService {
 
     }
 
-//    @Autowiring (Dependency Injection) done implicitly
+    //    @Autowiring (Dependency Injection) done implicitly
     @Autowired
-    public CommentService(CommentRepository commentDataBase,@Qualifier("emailCommentNotificationProxy") CommentNotificationProxy emailNotification) {
+    public CommentService(CommentRepository commentDataBase, @Qualifier("emailCommentNotificationProxy") CommentNotificationProxy emailNotification) {
         this.commentDataBase = commentDataBase;
         this.emailNotification = emailNotification;
     }

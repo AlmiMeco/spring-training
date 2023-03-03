@@ -12,7 +12,7 @@ public class CaseDimensions {
     private int width, heighth, depth;
 
 
-    public void pressPowerButton(){
+    public void pressPowerButton() {
         System.out.println("Turned On");
     }
 

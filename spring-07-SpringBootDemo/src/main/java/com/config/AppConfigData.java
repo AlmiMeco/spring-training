@@ -1,7 +1,6 @@
 package com.config;
 
 import lombok.Data;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -13,10 +12,10 @@ public class AppConfigData {
     @Value("${username}")
     private String userName;
 
-   @Value("${password}")
-    private String  passWord;
+    @Value("${password}")
+    private String passWord;
 
-   @Value("${url}")
+    @Value("${url}")
     private String url;
 
 

@@ -2,7 +2,6 @@ package com.cydeo.streotype_annotation;
 
 import com.cydeo.streotype_annotation.config.StereoypeConfig;
 import com.cydeo.streotype_annotation.monitorfactory.Monitor;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ComputerTest {

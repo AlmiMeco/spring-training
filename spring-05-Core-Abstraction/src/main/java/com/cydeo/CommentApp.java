@@ -10,11 +10,11 @@ public class CommentApp {
 
     public static void main(String[] args) {
 
-    /* OLD WAY {Pre-Spring} */
+        /* OLD WAY {Pre-Spring} */
 //        CommentService commentTest = new CommentService();
 //        commentTest.publishComment(new Comment("Alberto", " Hey what's up man? "));
 
-    /* NEW WAY */
+        /* NEW WAY */
 
 //----------------------------------------------------------------------------------------------------------------------
         // Entity/Model is usually handled on user side (UI) or already pre-defined in dB

@@ -3,7 +3,7 @@ package com.cydeo.streotype_annotation.monitorfactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AsusMonitor extends Monitor{
+public class AsusMonitor extends Monitor {
 
 
     public AsusMonitor() {

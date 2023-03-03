@@ -29,8 +29,6 @@ public class CommentApp {
         /* Singleton Vs Prototype Scopes Explained in Depth under Day 03 {Spring Core} */
 
 
-
-
     }
 
 

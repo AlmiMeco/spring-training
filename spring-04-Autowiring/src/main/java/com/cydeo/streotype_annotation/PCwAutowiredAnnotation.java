@@ -6,7 +6,10 @@ import com.cydeo.streotype_annotation.motherboardfactory.Motherboard;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-/** Autowired Annotation Can Be Injected In 3 Places - - > [FIELD, CONSTRUCTOR, & SETTER]  **/
+
+/**
+ * Autowired Annotation Can Be Injected In 3 Places - - > [FIELD, CONSTRUCTOR, & SETTER]
+ **/
 @Getter
 @Component
 public class PCwAutowiredAnnotation {
