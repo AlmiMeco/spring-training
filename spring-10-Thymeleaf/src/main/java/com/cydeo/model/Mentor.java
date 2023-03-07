@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class Mentor {
 
 
-    private String firstName, lastName, email, gender, batch, company;
+    private String firstName, lastName, email, gender, batch, jobDescription;
     private boolean graduated;
 
 

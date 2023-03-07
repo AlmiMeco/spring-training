@@ -5,18 +5,49 @@
     <title>Mentor Registration</title>
 </head>
 <body>
-  <div align="center">
-<form>
+<div align="center">
 
-  <label> First Name:</label>
-  <input type="text"><br>
+    <form th:action="@{/mentor/confirm}" th:object="${mentor}">
 
-  <label> Last Name:</label>
-  <input type="text"><br>
+        <label>First Name:</label>
+        <input type="text" th:field="*{firstName}"><br>
 
-</form>
+        <label>Last Name:</label>
+        <input type="text" th:field="*{lastName}"><br>
 
-  </div>
+        <label>Email:</label>
+        <input type="text" th:field="*{email}"><br>
+
+        <label>Graduated High School / GED Equivalent: </label>
+        <input type="checkbox" th:field="*{graduated}"><br>
+
+        <br>
+
+        <label>Gender</label>
+        <input type="radio" value="Male" th:field="*{gender}">Male
+        <input type="radio" value="Female" th:field="*{gender}">Female<br>
+
+        <br>
+
+        <label>Batch Number:</label>
+        <select th:field="*{batch}">
+            <option th:each=" batch : ${batchList} " th:value="${batch}" th:text="${batch}"></option>
+        </select> <br>
+
+        <br>
+
+        <label>Job Duties:</label>
+        <textarea th:field="*{jobDescription}"></textarea>
+
+        <br>
+        <br>
+        <br>
+
+        <button type="submit"> DONE </button>
+
+    </form>
+
+</div>
 
 </body>
 </html>
