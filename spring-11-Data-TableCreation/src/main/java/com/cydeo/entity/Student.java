@@ -3,7 +3,7 @@ package com.cydeo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "students")                               // <- Change tableName
+@Table(name = "students") // <- Change tableName
 public class Student {
 
     @Id
@@ -12,8 +12,11 @@ public class Student {
 
     private String firstName, lastName, email;
 
-    @Column(name = "maleOrFemale")                      // <- Change columnName
+    @Column(name = "maleOrFemale") // <- Change columnName
     private char gender;
+
+    @Transient
+    private String address;
 
 
 
