@@ -15,8 +15,8 @@
         <module name="spring-05-Core-Abstraction" />
         <module name="spring-09-MVC-Model" />
         <module name="spring-08-MVC-Controller" />
+        <module name="spring-12-Data-Relationships" />
         <module name="spring-02-Core-IoC-Stereotype-Annotation" />
-        <module name="spring-12-Data-Relationship" />
         <module name="spring-04-Autowiring" />
         <module name="spring-06-Core-BeanScope" />
         <module name="spring-07-SpringBootDemo" />
@@ -24,6 +24,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-07-SpringBoot-Demo" target="19" />
+      <module name="spring-12-Data-Relationship" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,6 +35,7 @@
       <module name="spring-10-Thymeleaf" options="-parameters" />
       <module name="spring-11-Data-TableCreation" options="-parameters" />
       <module name="spring-12-Data-Relationship" options="-parameters" />
+      <module name="spring-12-Data-Relationships" options="-parameters" />
     </option>
   </component>
 </project>
