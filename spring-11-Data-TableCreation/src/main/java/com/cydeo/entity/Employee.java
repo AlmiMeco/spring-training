@@ -1,9 +1,12 @@
 package com.cydeo.entity;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity // <- CREATING TABLE
+@NoArgsConstructor
 public class Employee {
 
     @Id // <- making 'id' the dataTables primary-key
@@ -12,6 +15,9 @@ public class Employee {
     private String fistName, lastName, email;
 
 
-
-
+    public Employee(String fistName, String lastName, String email) {
+        this.fistName = fistName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 }
