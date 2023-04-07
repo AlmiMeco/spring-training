@@ -1,7 +1,7 @@
 
 --Populating Employee Table
 INSERT INTO EMPLOYEES(id, name)
-VALUES (1, 'Mike');
+VALUES (5, 'Mike');
 
 
 INSERT INTO students(email, first_name, gender, last_name)
