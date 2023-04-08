@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Table(name = "payments")
 public class Payment {
 
-    @OneToOne // <-- Object Relationship REQUIRED for DI ( foreignKey creation )
+    @OneToOne(cascade = CascadeType.ALL) // <-- Object Relationship REQUIRED for DI ( foreignKey creation )
     private PaymentDetail paymentDetail;
 
 
