@@ -30,6 +30,9 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     private Status status;
 
+    @ManyToOne // <- Many foreignKeys assigned to one Primary
+    private Merchant merchant;
+
     public Payment(LocalDate createdDate, BigDecimal amount, Status status) {
         this.createdDate = createdDate;
         this.amount = amount;
