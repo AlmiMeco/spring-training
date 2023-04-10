@@ -33,6 +33,9 @@ public class Payment {
     @ManyToOne // <- Many foreignKeys assigned to one Primary
     private Merchant merchant;
 
+    @ManyToOne
+    private Customer customer;
+
     public Payment(LocalDate createdDate, BigDecimal amount, Status status) {
         this.createdDate = createdDate;
         this.amount = amount;
