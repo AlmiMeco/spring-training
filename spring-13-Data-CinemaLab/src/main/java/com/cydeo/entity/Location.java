@@ -6,11 +6,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 
 @Entity
-@Data
 @NoArgsConstructor
+@Data
+public class Location extends BaseEntity {
 
-public class Genre extends BaseEntity {
-
-    private String name;
+    private String name, latitude, longitude, country, city, state, postalCode, address;
 
 }
