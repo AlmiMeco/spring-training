@@ -1,13 +1,11 @@
 package com.cydeo;
 
-import com.cydeo.entity.Employee;
+import com.cydeo.repository.CourseRepository;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
-
-import java.util.List;
 
 @Controller
 public class DataGenerator implements CommandLineRunner {
@@ -15,11 +13,13 @@ public class DataGenerator implements CommandLineRunner {
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
     private final EmployeeRepository employeeRepository;
+    private final CourseRepository courseRepository;
 
-    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository) {
+    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository, CourseRepository courseRepository) {
         this.regionRepository = regionRepository;
         this.departmentRepository = departmentRepository;
         this.employeeRepository = employeeRepository;
+        this.courseRepository = courseRepository;
     }
 
     @Override
@@ -68,6 +68,16 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("findBySalary (56688): " + employeeRepository.findBySalary(56688));
 
         System.out.println("retrieveEmpSalary (via customQuery) -> " + employeeRepository.retrieveEmpSalary());
+
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+        System.out.println("----COURSES----");
+
+        //FIND ALL COURSES BY CATEGORY
+        System.out.println("findByCategory (category) -> " + courseRepository.findByCategory("Spring"));
+
+
 
 
 
