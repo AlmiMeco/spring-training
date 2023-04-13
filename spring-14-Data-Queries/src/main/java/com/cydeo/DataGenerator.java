@@ -1,10 +1,13 @@
 package com.cydeo;
 
+import com.cydeo.entity.Employee;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
+
+import java.util.List;
 
 @Controller
 public class DataGenerator implements CommandLineRunner {
@@ -55,7 +58,16 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("----EMPLOYEES----");
 
         // Display ALL empl with null email adress
-        System.out.println("findByEmail (null): " + employeeRepository.findByEmail(""));
+        System.out.println("findByEmail (...): " + employeeRepository.findByEmail(""));
+
+        //Display ALL empl w/ Salary below ""
+//        System.out.println("findBySalaryLessThan (50,000): " + employeeRepository.findBySalaryLessThan(50000));
+
+        System.out.println("findByEmail (null): " + employeeRepository.findByEmailIsNull());
+
+        System.out.println("findBySalary (56688): " + employeeRepository.findBySalary(56688));
+
+        System.out.println(employeeRepository.retrieveEmpSalary());
 
 
 
