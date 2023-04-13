@@ -67,7 +67,7 @@ public class DataGenerator implements CommandLineRunner {
 
         System.out.println("findBySalary (56688): " + employeeRepository.findBySalary(56688));
 
-        System.out.println(employeeRepository.retrieveEmpSalary());
+        System.out.println("retrieveEmpSalary (via customQuery) -> " + employeeRepository.retrieveEmpSalary());
 
 
 

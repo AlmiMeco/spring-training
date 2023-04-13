@@ -26,7 +26,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 
                                             /* |CUSTOM QUERY| */
-    @Query("SELECT e.salary FROM Employee e WHERE e.firstName='Bernardine'") // where 'e' represents the employee object
+    // where 'e' represents the employee object
+    @Query("SELECT e.salary FROM Employee e WHERE e.firstName='Bernardine'")
     Integer retrieveEmpSalary();
 
 
