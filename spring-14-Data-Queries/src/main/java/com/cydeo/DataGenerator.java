@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import com.cydeo.repository.DepartmentRepository;
+import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
@@ -10,10 +11,12 @@ public class DataGenerator implements CommandLineRunner {
 
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
+    private final EmployeeRepository employeeRepository;
 
-    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository) {
+    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository) {
         this.regionRepository = regionRepository;
         this.departmentRepository = departmentRepository;
+        this.employeeRepository = employeeRepository;
     }
 
     @Override
@@ -34,7 +37,6 @@ public class DataGenerator implements CommandLineRunner {
 //----------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------
-        System.out.println("----DEPARTMENTS----");
 
 
         //Display ALL departments in the Furniture Dept
@@ -47,8 +49,13 @@ public class DataGenerator implements CommandLineRunner {
         //Display Top 3 dept w/ div name including 'Hea' w.out dups
         System.out.println("findDistinctTop3ByDivisionContains ('Hea'): " + departmentRepository.findDistinctTop3ByDivisionContains("Hea"));
 
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+        System.out.println("----EMPLOYEES----");
 
-
+        // Display ALL empl with null email adress
+        System.out.println("findByEmail (null): " + employeeRepository.findByEmail(""));
 
 
 

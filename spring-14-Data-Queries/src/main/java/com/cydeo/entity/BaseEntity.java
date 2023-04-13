@@ -7,7 +7,7 @@ import javax.persistence.MappedSuperclass;
 public class BaseEntity {
 
     @Id
-    private Integer id;
+    private Long id;
 
 
 }
