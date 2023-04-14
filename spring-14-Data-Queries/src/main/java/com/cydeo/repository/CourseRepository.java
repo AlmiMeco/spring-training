@@ -2,6 +2,7 @@ package com.cydeo.repository;
 
 import com.cydeo.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -12,5 +13,10 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
 
     // {Boolean} Check if course with (X) name exists
     boolean existsByName(String name);
+
+    @Query("SELECT c FROM Course c WHERE c.rating = ?1")
+    List<Course> retrieveEmpSalaryNotEqual(int rating);
+
+
 
 }
