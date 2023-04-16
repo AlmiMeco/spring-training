@@ -78,8 +78,5 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("findByCategory (category) -> " + courseRepository.findByCategory("Spring"));
 
 
-
-
-
     }
 }

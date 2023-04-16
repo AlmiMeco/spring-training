@@ -14,9 +14,12 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
     // {Boolean} Check if course with (X) name exists
     boolean existsByName(String name);
 
-    @Query("SELECT c FROM Course c WHERE c.rating = ?1")
-    List<Course> retrieveEmpSalaryNotEqual(int rating);
 
+    @Query("SELECT c FROM Course c WHERE c.rating = ?1")
+    List<Course> retrieveCourseByRating(int rating);
+
+    // |] -> Both these methods are the same :: (first) -> JPQL Param  || (second) -> Custom Param
+    List<Course> findByRating();
 
 
 }
