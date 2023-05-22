@@ -18,19 +18,21 @@
         <module name="spring-08-MVC-Controller" />
         <module name="spring-12-Data-Relationships" />
         <module name="spring-02-Core-IoC-Stereotype-Annotation" />
+        <module name="spring-15-REST" />
         <module name="spring-14-Data-Queries" />
         <module name="spring-04-Autowiring" />
         <module name="spring-06-Core-BeanScope" />
+        <module name="spring-07-SpringBoot-Demo" />
         <module name="spring-07-SpringBootDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-07-SpringBoot-Demo" target="19" />
       <module name="spring-12-Data-Relationship" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-07-SpringBoot-Demo" options="-parameters" />
       <module name="spring-07-SpringBootDemo" options="-parameters" />
       <module name="spring-08-MVC-Controller" options="-parameters" />
       <module name="spring-09-MVC-Model" options="-parameters" />
@@ -40,6 +42,7 @@
       <module name="spring-12-Data-Relationships" options="-parameters" />
       <module name="spring-13-Data-CinemaLab" options="-parameters" />
       <module name="spring-14-Data-Queries" options="-parameters" />
+      <module name="spring-15-REST" options="-parameters" />
     </option>
   </component>
 </project>

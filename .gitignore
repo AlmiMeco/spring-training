@@ -1,2 +1,5 @@
 # Project exclude paths
-/spring-00-Coupling/target/
+
+out
+.idea
+*.iml
