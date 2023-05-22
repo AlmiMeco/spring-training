@@ -3,9 +3,7 @@ package com.cydeo.controller;
 import com.cydeo.dto.CourseDTO;
 import com.cydeo.repository.CourseRepository;
 import com.cydeo.service.CourseService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,9 +28,23 @@ public class CourseController {
     }
 
     @GetMapping("{id}")
-    public CourseDTO getCourseViaID(Long id){
+    public CourseDTO getCourseViaID(@PathVariable("id") Long id){
 
         return courseService.getCourseById(id);
+
+    }
+
+    @GetMapping("category/{catName}")
+    public List<CourseDTO> listAllCoursesViaCategory(@PathVariable("catName") String cat){
+
+        return courseService.getCoursesByCategory(cat);
+
+    }
+
+    @PostMapping
+    public CourseDTO createNewCourse(@RequestBody CourseDTO courseDTO){
+
+        return courseService.createCourse(courseDTO);
 
     }
 
