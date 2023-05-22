@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CourseDTO {
 
-    @JsonIgnore
+    @JsonIgnore // << Ignores JACKSON/GSON from converting to && from (JSON -> JAVA)
     private Long id;
     private String name;
     private String category;
