@@ -10,13 +10,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/courses/api/v2")
-public class CourseControler_ResponseEntity {
+public class CourseController_ResponseEntity {
 
 
     private final CourseService courseService;
 
 
-    public CourseControler_ResponseEntity(CourseService courseService) {
+    public CourseController_ResponseEntity(CourseService courseService) {
         this.courseService = courseService;
     }
 
@@ -25,7 +25,7 @@ public class CourseControler_ResponseEntity {
 
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
-                .header("V1", "Response Entity")
+                .header("V2", "Response Entity")
                 .body(courseService.getCourses());
 
     }
