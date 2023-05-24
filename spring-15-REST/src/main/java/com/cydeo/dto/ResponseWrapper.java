@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
 /** What is put here will appear on the JSON output body (POSTMAN) **/
+
 @Getter
 @Setter
 public class ResponseWrapper {
