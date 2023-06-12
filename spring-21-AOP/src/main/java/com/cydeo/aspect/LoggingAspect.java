@@ -26,19 +26,35 @@ public class LoggingAspect {
 //    }
 
 //======================================================================================================================
+                            /* Different Impl Of AOP ADVICE Functions */
 //======================================================================================================================
 
-                            /* Different Impl Of AOP ADVICE Functions */
+//    Passing On Values using JoinPoint {1}{2}{3}
 
-    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
-    public void courseRepositoryFindByIdPC() {}
+//    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
+//    public void courseRepositoryFindByIdPC() {}
+//
+//    @Before("courseRepositoryFindByIdPC()")
+//    public void logWithJoinInfo(JoinPoint joinPoint){
+//        logger.info("Logged before method -> {}, Arguments of method -> {}, Target of method -> {}"
+//        , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+//    }
+//  -> Logged before method -> Optional org.springframework.data.repository.CrudRepository.findById(Object), Arguments of method -> [2], Target of method -> org.springframework.data.jpa.repository.support.SimpleJpaRepository@198a5154
 
-    @Before("courseRepositoryFindByIdPC()")
-    public void logWithJoinInfo(JoinPoint joinPoint){
+//======================================================================================================================
+
+//    Choosing PointCut w/ Custom Annotation[s] (ANY methods annotated w/ our custom annotation will be intercepted by AOP)
+
+    @Pointcut("@annotation(com.cydeo.annotations.LoggingAnnotation)")
+    public void loggingAnnotation(){}
+
+    @Before("loggingAnnotation()")
+    public void logWithCustomAnnot(JoinPoint joinPoint){
         logger.info("Logged before method -> {}, Arguments of method -> {}, Target of method -> {}"
         , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
     }
-//  -> Logged before method -> Optional org.springframework.data.repository.CrudRepository.findById(Object), Arguments of method -> [2], Target of method -> org.springframework.data.jpa.repository.support.SimpleJpaRepository@198a5154
+
+
 
 
 //======================================================================================================================
