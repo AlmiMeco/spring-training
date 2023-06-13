@@ -1,6 +1,7 @@
 package com.cydeo.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -43,21 +44,35 @@ public class LoggingAspect {
 
 //======================================================================================================================
 
-//    Choosing PointCut w/ Custom Annotation[s] (ANY methods annotated w/ our custom annotation will be intercepted by AOP)
+//    Passing on Values {AFTER} method exec. -> AfterAReturningAdvice
 
-    @Pointcut("@annotation(com.cydeo.annotations.LoggingAnnotation)")
-    public void loggingAnnotation(){}
+    /* Using @AfterReturning we can also CAPTURE & RETURN the RESULT of our AOP interception */
 
-    @Before("loggingAnnotation()")
-    public void logWithCustomAnnot(JoinPoint joinPoint){
-        logger.info("Logged before method -> {}, Arguments of method -> {}, Target of method -> {}"
-        , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+
+    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
+    public void courseRepositoryFindByIdPC() {}
+
+    @AfterReturning(pointcut = "courseRepositoryFindByIdPC()", returning = "result")
+    public void logPassedAfterMethodExec(Object result){
+        logger.info("After Method Is Executed return RESULT -> {} ", result.toString());
     }
-
-
-
+//    After Method Is Executed return RESULT -> Optional[Course(id=2, name=Getting Started with Spring Security DSL, category=Spring, rating=3, description=Learn Spring Security DSL in easy steps)]
 
 //======================================================================================================================
+
+//    Choosing PointCut w/ Custom Annotation[s] (ANY methods annotated w/ our custom annotation will be intercepted by AOP)
+
+//    @Pointcut("@annotation(com.cydeo.annotations.LoggingAnnotation)")
+//    public void loggingAnnotation(){}
+
+//    @Before("loggingAnnotation()")
+//    public void logWithCustomAnnot(JoinPoint joinPoint){
+//        logger.info("Logged before method -> {}, Arguments of method -> {}, Target of method -> {}"
+//        , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+//    }
+
+//======================================================================================================================
+
 
 
 }
