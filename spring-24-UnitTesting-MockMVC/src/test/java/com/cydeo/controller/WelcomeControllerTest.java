@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(WelcomeController.class)
 class WelcomeControllerTest {
@@ -36,6 +37,18 @@ class WelcomeControllerTest {
     }
 
 
+    @Test
+    void welcomeTest_Preferred() throws Exception {
+
+        RequestBuilder request = MockMvcRequestBuilders.get("/welcome")
+                .accept(MediaType.APPLICATION_JSON);
+
+        mvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().string("welcome"))
+                .andReturn();
+
+    }
 
 
 
