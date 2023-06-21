@@ -29,6 +29,7 @@
         <module name="spring-04-Autowiring" />
         <module name="spring-06-Core-BeanScope" />
         <module name="spring-07-SpringBoot-Demo" />
+        <module name="spring-24-UnitTesting-MockMVC" />
         <module name="spring-07-SpringBootDemo" />
       </profile>
     </annotationProcessing>
@@ -55,6 +56,7 @@
       <module name="spring-21-AOP" options="-parameters" />
       <module name="spring-22-UnitTesting-JUnit5" options="" />
       <module name="spring-23-UnitTesting-Mockito" options="-parameters" />
+      <module name="spring-24-UnitTesting-MockMVC" options="-parameters" />
     </option>
   </component>
 </project>
