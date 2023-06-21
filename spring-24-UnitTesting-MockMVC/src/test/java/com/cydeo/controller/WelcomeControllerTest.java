@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(WelcomeController.class)
+@WebMvcTest(WelcomeController.class) // <- Auto-Configs required Beans for Controller Functionality
 class WelcomeControllerTest {
 
     @Autowired
